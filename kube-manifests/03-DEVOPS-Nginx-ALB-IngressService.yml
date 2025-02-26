@@ -7,7 +7,7 @@ metadata:
     app: eks-devops
   annotations:
     # Ingress Core Settings  
-    kubernetes.io/ingress.class: "alb"
+    # kubernetes.io/ingress.class: "alb"
     alb.ingress.kubernetes.io/scheme: internet-facing
     # Health Check Settings
     alb.ingress.kubernetes.io/healthcheck-protocol: HTTP 
@@ -26,7 +26,7 @@ metadata:
     # External DNS - For creating a Record Set in Route53
     external-dns.alpha.kubernetes.io/hostname: devops.kubeoncloud.com       
 spec:
-  ingressClassName: my-aws-ingress-class # Ingress Class
+  ingressClassName: alb # Ingress Class
   rules:
     - http:
         paths:
