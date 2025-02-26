@@ -39,6 +39,7 @@ spec:
             backend:
               service:
                 name: eks-devops-nodeport-service
-                port: 80                                   
+                port: 
+                  number: 80                                   
 # Important Note-1: In path based routing order is very important, if we are going to use  "/*", try to use it at the end of all rules.         
 
