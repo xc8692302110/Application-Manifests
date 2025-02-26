@@ -34,7 +34,8 @@ spec:
             backend:
               service:
                 name: ssl-redirect
-                port: use-annotation            
+                port: 
+                  name: use-annotation            
           - path: /*
             backend:
               service:
